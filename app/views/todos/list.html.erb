@@ -1,0 +1,28 @@
+<table class="table table-bordered">
+  <tr class="row">
+      <td class="col-md-6">
+        <h4>Actividades sin completar</h4>
+      </td>
+      <td class="col-md-6">
+        <h4>Actividades completadas</h4>
+      </td>
+    </tr>
+
+    <tr class="row">
+      <td class="col-md-6">
+        <% @todos.each do |e| %>
+        <div class="fer">
+          <%= e.completed ? '' : e.description  %>
+        </div>
+        <% end %>
+      </td>
+      <td class="col-md-6">
+        <% @todos.each do |e| %>
+        <div class="fer">
+          <%= e.completed ? e.description : ''  %>
+        </div>
+        <% end %>
+      </td>
+    </tr>
+  </div>
+</table>
